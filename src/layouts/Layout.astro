@@ -1,28 +1,38 @@
 ---
+import Header from '../components/header.astro';
+import Footer from '../components/footer.astro';
+import '../styles.scss'
 export interface Props {
-  title: string;
+  title?: string;
 }
-const { title } = Astro.props
+
+const { title = 'Avas Fun World' } = Astro.props as Props
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>{Astro.props.title}</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>{title}</title>
 </head>
-<body>
+<body class="w-screen h-screen gradientFromHell mx-auto p-12 text-center flex flex-col justify-start">
+  <Header />
   <slot />
+  <Footer />
 </body>
 </html>
 
-<style is:global>
-	@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
-	@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
-	@import "/src/styles.scss";
+<style lang="scss" is:global>
+  $avaRhubarb: #8100a8ff;
+  $avaViolet: #871fffff;
+  $avaPizzazz: #ff57eeff;
+  $avaLemon: #fffd70ff;
+  $gradient-top: linear-gradient(0deg, $avaRhubarb, $avaViolet, $avaPizzazz, $avaLemon);
 
-	.yellow {
-		color: yellow !important;
-	}
+  .gradientFromHell {
+    background-image: $gradient-top;
+  }
+
 
 </style>

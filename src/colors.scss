@@ -1,0 +1,17 @@
+
+/* SCSS HEX */
+$avaRhubarb: #8100a8ff;
+$avaViolet: #871fffff;
+$avaPizzazz: #ff57eeff;
+$avaLemon: #fffd70ff;
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, $avaRhubarb, $avaViolet, $avaPizzazz, $avaLemon, $avaLemon, $avaLemon);
+$gradient-right: linear-gradient(90deg, $avaRhubarb, $avaViolet, $avaPizzazz, $avaLemon, $avaLemon, $avaLemon);
+$gradient-bottom: linear-gradient(180deg, $avaRhubarb, $avaViolet, $avaPizzazz, $avaLemon, $avaLemon, $avaLemon);
+$gradient-left: linear-gradient(270deg, $avaRhubarb, $avaViolet, $avaPizzazz, $avaLemon, $avaLemon, $avaLemon);
+$gradient-top-right: linear-gradient(45deg, $avaRhubarb, $avaViolet, $avaPizzazz, $avaLemon, $avaLemon, $avaLemon);
+$gradient-bottom-right: linear-gradient(135deg, $avaRhubarb, $avaViolet, $avaPizzazz, $avaLemon, $avaLemon, $avaLemon);
+$gradient-top-left: linear-gradient(225deg, $avaRhubarb, $avaViolet, $avaPizzazz, $avaLemon, $avaLemon, $avaLemon);
+$gradient-bottom-left: linear-gradient(315deg, $avaRhubarb, $avaViolet, $avaPizzazz, $avaLemon, $avaLemon, $avaLemon);
+$gradient-radial: radial-gradient($avaRhubarb, $avaViolet, $avaPizzazz, $avaLemon, $avaLemon, $avaLemon);

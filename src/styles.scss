@@ -1,17 +1,37 @@
+@import './colors.scss';
+@import './scroller.scss';
 
-/* SCSS HEX */
-$avaRhubarb: #8100a8ff;
-$avaViolet: #871fffff;
-$avaPizzazz: #ff57eeff;
-$avaLemon: #fffd70ff;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 
-/* SCSS Gradient */
-$gradient-top: linear-gradient(0deg, #8100a8ff, #871fffff, #ff57eeff, #fffd70ff);
-$gradient-right: linear-gradient(90deg, #8100a8ff, #871fffff, #ff57eeff, #fffd70ff);
-$gradient-bottom: linear-gradient(180deg, #8100a8ff, #871fffff, #ff57eeff, #fffd70ff);
-$gradient-left: linear-gradient(270deg, #8100a8ff, #871fffff, #ff57eeff, #fffd70ff);
-$gradient-top-right: linear-gradient(45deg, #8100a8ff, #871fffff, #ff57eeff, #fffd70ff);
-$gradient-bottom-right: linear-gradient(135deg, #8100a8ff, #871fffff, #ff57eeff, #fffd70ff);
-$gradient-top-left: linear-gradient(225deg, #8100a8ff, #871fffff, #ff57eeff, #fffd70ff);
-$gradient-bottom-left: linear-gradient(315deg, #8100a8ff, #871fffff, #ff57eeff, #fffd70ff);
-$gradient-radial: radial-gradient(#8100a8ff, #871fffff, #ff57eeff, #fffd70ff);
+
+.yellow {
+  color: yellow !important;
+}
+
+.jelloHorizontal {
+  animation: jelloHorizontal 2s both;
+  animation-delay: 1s;
+  animation-play-state: running;
+  animation-iteration-count: 3;
+  cursor: pointer;
+}
+
+
+.jelloHorizontal:hover {
+  animation: jelloHorizontal 2s both;
+  // animation-timing-function: ease;
+  // animation-delay: initial !important;
+  animation-play-state: running;
+  // background: red;
+}
+
+@keyframes jelloHorizontal {
+  0% { transform: scale3d(1, 1, 1); }
+  30% { transform: scale3d(1.25, 0.75, 1); }
+  40% { transform: scale3d(0.75, 1.25, 1); }
+  50% { transform: scale3d(1.15, 0.85, 1); }
+  65% { transform: scale3d(0.95, 1.05, 1); }
+  75% { transform: scale3d(1.05, 0.95, 1); }
+  100% { transform: scale3d(1, 1, 1); }
+}

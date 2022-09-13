@@ -1,11 +1,38 @@
 ---
 import Layout from '../layouts/Layout.astro'
-const header = "Ava's Fun World"
+import Header from '../components/header.astro'
+// const avaMean = 'src/images/ava-mean.png'
+// const avaNice = 'src/images/ava-nice.png'
 
 ---
 
-<Layout title="Ava's Fun World">
-	<div class="mx-auto p-24 w-screen h-screen bg-avaRhubarb overflow-auto">
-		<h1 class="font-extrabold font-serif text-6xl text-avaLemon mb-6">{header}</h1>
+<Layout>
+	<div class="overflow-auto my-6">
+		<div class="h-full py-6 px-24 text-left leading-10">
+			<h1 class="text-5xl mb-2 leading-10">This is a headline!</h1>
+			<h5 class="text-2xl mb-2 leading-10">This is a subhead</h5>
+			<p class="text-base leading-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque expedita itaque hic ullam nobis similique? Sed repellendus dignissimos obcaecati? Ut facilis consequuntur quaerat. Voluptatem, dolorem et ab corporis totam cupiditate.</p>
+			<p class="text-base leading-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi explicabo numquam aliquid saepe repellat officia quos, vel iusto sapiente, dolore officiis. Modi asperiores obcaecati velit suscipit assumenda, laborum debitis?</p>
+			<button class="rounded-full gradientFromHell px-3 py-0 leading-1 mt-4 ">Read More</button>
+		</div>
+		<div class="h-full py-6 px-24 text-left leading-10">
+			<h1 class="text-5xl mb-2 leading-10">This is a headline!</h1>
+			<h5 class="text-2xl mb-2 leading-10">This is a subhead</h5>
+			<p class="text-base leading-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque expedita itaque hic ullam nobis similique? Sed repellendus dignissimos obcaecati? Ut facilis consequuntur quaerat. Voluptatem, dolorem et ab corporis totam cupiditate.</p>
+			<p class="text-base leading-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi explicabo numquam aliquid saepe repellat officia quos, vel iusto sapiente, dolore officiis. Modi asperiores obcaecati velit suscipit assumenda, laborum debitis?</p>
+			<button class="rounded-full gradientFromHell px-3 py-0 leading-1 mt-4 ">Read More</button>
+		</div>
+		<div class="h-full py-6 px-24 text-left leading-10">
+			<h1 class="text-5xl mb-2 leading-10">This is a headline!</h1>
+			<h5 class="text-2xl mb-2 leading-10">This is a subhead</h5>
+			<p class="text-base leading-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque expedita itaque hic ullam nobis similique? Sed repellendus dignissimos obcaecati? Ut facilis consequuntur quaerat. Voluptatem, dolorem et ab corporis totam cupiditate.</p>
+			<p class="text-base leading-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi explicabo numquam aliquid saepe repellat officia quos, vel iusto sapiente, dolore officiis. Modi asperiores obcaecati velit suscipit assumenda, laborum debitis?</p>
+			<button class="rounded-full gradientFromHell px-3 py-0 leading-1 mt-4 ">Read More</button>
+		</div>
 	</div>
 </Layout>
+
+
+<style lang="scss">
+
+</style>
