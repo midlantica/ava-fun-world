@@ -5,12 +5,16 @@ const headerText = "Ava's Fun World"
 
 ---
 
-<footer class="flex flex-row gap-4 m-auto justify-center items-center p-3 border border-white rounded-2xl w-full">
-  <img class="h-12 items-center m-0 jelloHorizontal" src={avaNice} alt="" />
-  <h6 class="text-2xl font-extrabold font-serif text-avaLemon self-center">{headerText}</h6>
-  <p class="text-avaLemon"><a href="#">Home</a></p>
-  <p class="text-avaLemon"><a href="#">Blog</a></p>
-  <p class="text-avaLemon"><a href="#">About</a></p>
+<footer class="flex flex-col sm:flex-row gap-3 justify-between items-center p-0 rounded-2xl w-full text-avaLemon">
+  <div class="flex flex-col sm:flex-row gap-2">
+    <img class="h-10 items-center m-0 jelloHorizontal" src={avaNice} alt="" />
+    <h6 class="text-[max(2rem,2vw)] font-extrabold font-sans text-left">{headerText}</h6>
+  </div>
+  <div class="flex flex-col sm:flex-row gap-8 justify-between mr-6 text-[max(1rem,1.5vw)]">
+    <p class=""><a href="#">Home</a></p>
+    <p class=""><a href="#">Blog</a></p>
+    <p class=""><a href="#">About</a></p>
+  </div>
 </footer>
 
 <style lang="scss">
