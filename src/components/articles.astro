@@ -1,0 +1,77 @@
+---
+import { Img } from "astro-imagetools/components";
+import { BackgroundPicture } from "astro-imagetools/components";
+
+import Layout from '../layouts/Layout.astro'
+// import Button from '../components/button.astro'
+const avaMean = 'src/images/ava-mean.png'
+const avaNice = 'src/images/ava-nice.png'
+
+const blogArticles = [
+	{
+		head: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+		body: "Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum.",
+		imageUrl: "https://placedog.net/500/280?random"
+	},
+	{
+		head: "Nullam id dolor id nibh ultricies vehicula ut id elit.",
+		body: "Nulla vitae elit libero, a pharetra augue. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus.",
+		imageUrl: "https://placedog.net/500/280?random"
+	},
+	{
+		head: "Egestas Risus Fusce Ipsum",
+		body: "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+		imageUrl: "https://placedog.net/500/280?random"
+	},
+	{
+		head: "Maecenas sed diam eget risus varius blandit sit amet non magna.",
+		body: "Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum.",
+		imageUrl: "https://placedog.net/500/280?random"
+	},
+	{
+		head: "Nullam quis risus eget urna mollis ornare vel eu leo.",
+		body: "Nulla vitae elit libero, a pharetra augue. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus.",
+		imageUrl: "https://placedog.net/500/280?random"
+	},
+	{
+		head: "Nibh Tristique Ullamcorper Aenean Bibendum",
+		body: "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.",
+		imageUrl: "https://placedog.net/500/280?random"
+	}
+]
+---
+
+<Layout>
+  <div class="grid grid-cols-1 overflow-auto sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 pr-6">
+
+    {blogArticles.map(article => (
+      <a href="#">
+        <article class="bg-white h-full rounded-2xl text-left leading-10 p-0 shadow-lg">
+          <Img src={article.imageUrl} alt={article.head} />
+          <div class="py-3 px-4">
+            <h1 class="text-avaRhubarb text-lg font-bold leading-[1.25] mb-1 line-clamp-2">{article.head}</h1>
+            <p class="text-sm leading-5 mb-2 line-clamp-4">{article.body}</p>
+            <!-- <Button title="Read More" /> -->
+          </div>
+        </article>
+      </a>
+    ))}
+
+  </div>
+</Layout>
+
+
+<style lang="scss" is:global>
+
+  [class^="astro-imagetools-img"] {
+    @apply rounded-t-xl rounded-b-none;
+  }
+
+	button {
+		align-self: flex-end;
+	}
+	article:last-child {
+		margin-bottom: 0 !important;
+	}
+
+</style>

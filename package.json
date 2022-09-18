@@ -11,10 +11,12 @@
   },
   "dependencies": {
     "@astrojs/tailwind": "^1.0.0",
-    "astro": "^1.2.1"
+    "astro": "^1.2.1",
+    "astro-imagetools": "^0.6.10"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/line-clamp": "^0.4.2",
     "sass": "^1.54.9"
   }
 }

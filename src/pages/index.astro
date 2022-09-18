@@ -1,46 +1,25 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Button from '../components/button.astro'
-
+import Header from '../components/header.astro'
+import Articles from '../components/articles.astro'
 // const avaMean = 'src/images/ava-mean.png'
 // const avaNice = 'src/images/ava-nice.png'
-
 ---
 
 <Layout>
-	<div class="bg-white p-4 m-2 rounded-2xl rounded-r-lg overflow-auto">
-		<div class="m-3">
-
-			<div class="h-full pb-12 text-left leading-10">
-				<h1 class="text-3xl font-bold mb-2 leading-10">This is a headline!</h1>
-				<h5 class="text-xl font-bold mb-2 leading-10">This is a subhead</h5>
-				<p class="text-base leading-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque expedita itaque hic ullam nobis similique? Sed repellendus dignissimos obcaecati? Ut facilis consequuntur quaerat. Voluptatem, dolorem et ab corporis totam cupiditate.</p>
-				<p class="text-base leading-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi explicabo numquam aliquid saepe repellat officia quos, vel iusto sapiente, dolore officiis. Modi asperiores obcaecati velit suscipit assumenda, laborum debitis?</p>
-				<button class="rounded-full gradientFromHell px-5 py-0 leading-1 mt-4 text-white">Read More</button>
-				<Button title="Read More" />
-			</div>
-
-			<div class="h-full pb-12 text-left leading-10">
-				<h1 class="text-3xl font-bold mb-2 leading-10">This is a headline!</h1>
-				<h5 class="text-xl font-bold mb-2 leading-10">This is a subhead</h5>
-				<p class="text-base leading-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque expedita itaque hic ullam nobis similique? Sed repellendus dignissimos obcaecati? Ut facilis consequuntur quaerat. Voluptatem, dolorem et ab corporis totam cupiditate.</p>
-				<p class="text-base leading-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi explicabo numquam aliquid saepe repellat officia quos, vel iusto sapiente, dolore officiis. Modi asperiores obcaecati velit suscipit assumenda, laborum debitis?</p>
-				<button class="rounded-full gradientFromHell px-3 py-0 leading-1 mt-4 text-white">Read More</button>
-			</div>
-
-			<div class="h-full pb-12 text-left leading-10">
-				<h1 class="text-3xl font-bold mb-2 leading-10">This is a headline!</h1>
-				<h5 class="text-xl font-bold mb-2 leading-10">This is a subhead</h5>
-				<p class="text-base leading-6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque expedita itaque hic ullam nobis similique? Sed repellendus dignissimos obcaecati? Ut facilis consequuntur quaerat. Voluptatem, dolorem et ab corporis totam cupiditate.</p>
-				<p class="text-base leading-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta modi explicabo numquam aliquid saepe repellat officia quos, vel iusto sapiente, dolore officiis. Modi asperiores obcaecati velit suscipit assumenda, laborum debitis?</p>
-				<button class="rounded-full gradientFromHell px-3 py-0 leading-1 mt-4 text-white">Read More</button>
-			</div>
-
-		</div>
-	</div>
+	<Header />
+	<Articles />
 </Layout>
 
 
-<style lang="scss">
+<style lang="scss" is:global>
+
+	button {
+		align-self: flex-end;
+	}
+	article:last-child {
+		margin-bottom: 0 !important;
+	}
 
 </style>

@@ -1,4 +1,32 @@
 ---
-let title = "title"
+const { title } = Astro.props
 ---
-<button class="rounded-full gradientFromHell px-5 py-0 leading-1 mt-4 text-white">{{title}}</button>
+<button class="text-xs text-white rounded-full px-6 py-2 leading-1 mt-2"><span class="drop-shadow-[0px_2px_1px_#00000075]">{title}</span></button>
+
+<style lang="scss">
+
+  $avaRhubarb: #8100a8ff;
+  $avaViolet: #871fffff;
+  $avaPizzazz: #ff57eeff;
+  $avaLemon: #fffd70ff;
+
+  $gradient-top: linear-gradient(0deg, $avaViolet, $avaPizzazz, $avaLemon);
+  $gradient-bottom: linear-gradient(180deg, $avaViolet, $avaPizzazz, $avaLemon);
+  .gradientFromHell {
+    background-image: $gradient-top;
+  }
+  .gradientFromHellB {
+    background-image: $gradient-bottom;
+  }
+
+  button {
+    color: white;
+    // font-weight: semibold;
+    background-image: $gradient-top;
+    letter-spacing: .025rem;
+    &:hover {
+      // color: black;
+      background: $avaRhubarb;
+    }
+  }
+</style>
