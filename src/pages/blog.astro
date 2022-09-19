@@ -1,26 +1,39 @@
 ---
-import Header from '../components/header.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from '../layouts/Layout.astro'
+import Header from '../components/header.astro'
+import Panel from '../components/panel.astro'
 
-import Image from '../components/image.astro'
+// import Image from '../components/image.astro'
 
-// const avaMean = 'src/images/ava-mean.png'
+const avaMean = 'src/images/ava-mean.png'
 // const avaNice = 'src/images/ava-nice.png'
+
+const posts = await Astro.glob('../posts/*.md')
+// const { frontmatter } = Astro.props.post
 ---
 
 <Layout title="Ava's Fun World - Blog">
   <Header />
+
   <div class="overflow-auto pr-6">
-    <div class="w-full bg-white h-auto p-36 pt-20 rounded-3xl">
-      <div class="flex flex-row gap-10">
-        <div class="w-60 bg-slate-400">
-          <Image imageUrl="/ava-mean.png" altText={'Ava Mean'} />
+
+    <div class="w-full bg-white h-auto px-12 py-12 rounded-3xl mb-6">
+      <div class="grid grid-cols-3 gap-10">
+        <div class="">
+          <!-- <Image imageUrl="/ava-mean.png" altText={'Ava Mean'} /> -->
+          <img class="w-full rounded-l-2xl" src="https://placedog.net/400/480" alt="Nahhh">
         </div>
-        <div class="flex flex-col">
-          <h1 class="text-5xl font-light text-avaRhubarb text-left leading-tight">This is my blog headline</h1>
-          <p class="text-lg font-normal text-black leading-10 text-left">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        <div class="col-span-2">
+          {posts.map(post => (
+            <Panel>
+              <h2>{post.frontmatter.title}</h2>
+              <p>{post.frontmatter.excerpt}</p>
+              <a class="rounded-full px-8 py-1 bg-avaRhubarb" href="`/${post.frontmatter.slug}`">Read More</a>
+            </Panel>
+          ))}
         </div>
       </div>
     </div>
+
   </div>
 </Layout>
