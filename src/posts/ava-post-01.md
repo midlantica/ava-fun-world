@@ -1,6 +1,6 @@
 ---
 title: Ava's first post!
-slug: This is the first post I ever made!
+slug: This-is-the-first-post-I-ever-made
 excerpt: Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
 date: 2022-09-18
 author: Ava Rose Harper

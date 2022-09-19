@@ -1,6 +1,6 @@
 ---
 title: This is my second post woohoo!
-slug: I never thought I would have two posts! Yeshh!
+slug: I-never-thought-I-would-have-two-posts-Yeshh
 excerpt: Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 date: 2022-09-19
 author: Ava Rose Harper

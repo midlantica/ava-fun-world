@@ -13,7 +13,13 @@ const posts = await Astro.glob('../posts/*.md')
 
 <Layout title="Ava's Fun World - Blog">
   <Header />
-
+  <div>
+    {posts.map(post => (
+      {post.frontmatter.title}
+      {post.frontmatter.excerpt}
+      ))
+    }
+  </div>
   <div class="overflow-auto pr-6">
 
     <div class="w-full bg-white h-auto px-12 py-12 rounded-3xl mb-6">
