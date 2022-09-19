@@ -1,0 +1,27 @@
+---
+import {
+  BackgroundImage,
+  ImageSupportDetection,
+} from "astro-imagetools/components";
+
+const { imageUrl, altText } = Astro.props as Props
+
+export interface Props {
+  imageUrl: string,
+  altText: string,
+}
+
+---
+
+<BackgroundImage
+  src={imageUrl}
+  alt={altText}
+  backgroundPosition="50% 20%"
+/>
+
+<style lang="scss">
+  [class^="astro-imagetools-background-image"] {
+    @apply rounded-t-xl rounded-b-none h-40 min-h-[12rem] bg-no-repeat;
+    width: 100%;
+  }
+</style>

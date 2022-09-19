@@ -1,11 +1,7 @@
 ---
-// import { Img } from "astro-imagetools/components";
-import {
-  BackgroundImage,
-  ImageSupportDetection,
-} from "astro-imagetools/components";
-
 import Layout from '../layouts/Layout.astro'
+import Panel from './panel.astro'
+import Image from './image.astro'
 
 const blogArticles = [
 	{
@@ -41,36 +37,23 @@ const blogArticles = [
 ]
 ---
 
-<Layout>
-  <div class="grid grid-cols-1 overflow-auto sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 pr-6">
-
-    {blogArticles.map(article => (
-      <article class="bg-white h-full rounded-2xl text-left leading-10 p-0 shadow-lg">
-        <a href="#">
-          <BackgroundImage
-            src={article.imageUrl}
-            alt={article.head}
-            backgroundPosition="50% 10%"
-          />
-          <div class="py-3 px-4">
-            <h1 class="text-avaRhubarb text-lg font-bold leading-[1.25] mb-1 line-clamp-2">{article.head}</h1>
-            <p class="text-sm leading-5 mb-2 line-clamp-4">{article.body}</p>
-          </div>
-        </a>
-      </article>
-    ))}
-
-  </div>
-</Layout>
+<div class="grid grid-cols-1 overflow-auto sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 pr-6">
+	{blogArticles.map(article => (
+		<article class="bg-white h-full rounded-2xl text-left leading-10 p-0 shadow-lg">
+			<a href="#">
+				<Image imageUrl={ article.imageUrl } altText={ article.head } />
+				<Panel dark={ false } head={ article.head } body={ article.body } />
+			</a>
+		</article>
+	))}
+</div>
 
 <style lang="scss" is:global>
-
-  [class^="astro-imagetools-background-image"] {
+	[class^="astro-imagetools-background-image"] {
     @apply rounded-t-xl rounded-b-none h-40 min-h-[12rem] bg-no-repeat;
   }
 
   article:first-child {
     grid-column: span 2 !important;
   }
-
 </style>

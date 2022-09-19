@@ -1,0 +1,26 @@
+---
+import Header from '../components/header.astro';
+import Layout from '../layouts/Layout.astro';
+
+import Image from '../components/image.astro'
+
+// const avaMean = 'src/images/ava-mean.png'
+// const avaNice = 'src/images/ava-nice.png'
+---
+
+<Layout title="Ava's Fun World - Blog">
+  <Header />
+  <div class="overflow-auto pr-6">
+    <div class="w-full bg-white h-auto p-36 pt-20 rounded-3xl">
+      <div class="flex flex-row gap-10">
+        <div class="w-60 bg-slate-400">
+          <Image imageUrl="/ava-mean.png" altText={'Ava Mean'} />
+        </div>
+        <div class="flex flex-col">
+          <h1 class="text-5xl font-light text-avaRhubarb text-left leading-tight">This is my blog headline</h1>
+          <p class="text-lg font-normal text-black leading-10 text-left">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Maecenas sed diam eget risus varius blandit sit amet non magna. Sed posuere consectetur est at lobortis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

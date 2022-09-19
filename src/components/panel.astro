@@ -1,0 +1,13 @@
+---
+const { head, body, dark = false } = Astro.props as Props
+
+export interface Props {
+  head?: string,
+  body?: string,
+  dark?: boolean
+}
+---
+<div class={`py-3 px-4 text-black bg-white rounded-b-2xl ${dark && 'bg-gray-800 text-white'}`}>
+  <h1 class="text-inherit text-lg font-bold leading-[1.25] mb-1 line-clamp-2">{head}</h1>
+  <p class="text-inherit text-sm leading-5 mb-2 line-clamp-4">{body}</p>
+</div>
