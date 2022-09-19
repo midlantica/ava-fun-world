@@ -19,7 +19,9 @@ const { Content, frontmatter } = Astro.props.post
 ---
 
 <Layout title={frontmatter.title}>
-  <a href="/">Go Back</a>
-  <h2>{frontmatter.title}</h2>
-  <Content />
+  <Panel>
+    <a href="/">Go Back</a>
+    <h2>{frontmatter.title}</h2>
+    <Content />
+  </Panel>
 </Layout>

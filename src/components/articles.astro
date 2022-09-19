@@ -6,31 +6,37 @@ import Image from './image.astro'
 const blogArticles = [
 	{
 		head: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+		slug: "ava-post-01",
 		body: "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna.",
 		imageUrl: "https://placedog.net/800/650"
 	},
 	{
 		head: "Nullam id dolor id nibh ultricies vehicula ut id elit.",
+		slug: "Nullam-id-dolor-id",
 		body: "Nulla vitae elit libero, a pharetra augue. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus.",
 		imageUrl: "https://placedog.net/600/400"
 	},
 	{
 		head: "Egestas Risus Fusce Ipsum",
+		slug: "Egestas-Risus-Fusce-Ipsu",
 		body: "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.",
 		imageUrl: "https://placedog.net/600/600"
 	},
 	{
 		head: "Maecenas sed diam eget risus varius blandit sit amet non magna.",
+		slug: "Maecenas-sed-diam-eget",
 		body: "Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum.",
 		imageUrl: "https://placedog.net/600/350"
 	},
 	{
-		head: "Nullam quis risus eget urna mollis ornare vel eu leo.",
+		head: "Porta Tellus Fringilla Euismod.",
+		slug: "Porta-Tellus-Fringilla-Euismod",
 		body: "Nulla vitae elit libero, a pharetra augue. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus.",
 		imageUrl: "https://placedog.net/600/900"
 	},
 	{
 		head: "Nibh Tristique Ullamcorper Aenean Bibendum",
+		slug: "Nibh-Tristique-Ullamcorper-Aenean",
 		body: "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.",
 		imageUrl: "https://placedog.net/500/500"
 	}
@@ -40,7 +46,7 @@ const blogArticles = [
 <div class="grid grid-cols-1 overflow-auto sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 pr-6">
 	{blogArticles.map(article => (
 		<article class="bg-white h-full rounded-2xl text-left leading-10 p-0 shadow-lg">
-			<a href="#">
+			<a href={article.slug}>
 				<Image imageUrl={ article.imageUrl } altText={ article.head } />
 				<Panel dark={ false } head={ article.head } body={ article.body } />
 			</a>
