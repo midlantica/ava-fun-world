@@ -1,15 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Button from '../components/button.astro'
-import Header from '../components/header.astro'
-import Articles from '../components/articles.astro'
+import Blog from '../components/blog.astro'
+
+import Image from '../components/image.astro'
+
 const avaMean = 'src/images/ava-mean.png'
 const avaNice = 'src/images/ava-nice.png'
+
+const posts = await Astro.glob('../posts/*.md')
+
 ---
 
 <Layout title="Ava's Fun World - Home">
-	<Header />
-	<Articles />
+	<Blog />
 </Layout>
 
 <style lang="scss" is:global>
@@ -20,5 +23,14 @@ const avaNice = 'src/images/ava-nice.png'
 	article:last-child {
 		margin-bottom: 0 !important;
 	}
+
+
+	[class^="astro-imagetools-background-image"] {
+    @apply rounded-t-xl rounded-b-none h-40 min-h-[12rem] bg-no-repeat;
+  }
+
+  article:first-child {
+    grid-column: span 2 !important;
+  }
 
 </style>

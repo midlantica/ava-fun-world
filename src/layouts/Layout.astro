@@ -1,5 +1,7 @@
 ---
 import '../styles/styles.scss'
+import Header from '../components/header.astro'
+
 export interface Props {
   title?: string;
 }
@@ -15,6 +17,7 @@ const { title = 'Avas Fun World' } = Astro.props as Props
   <title>{title}</title>
 </head>
 <body class="container w-screen h-screen mx-auto p-6 text-center flex flex-col gap-2 justify-start gradientFromHell">
+  <Header />
   <slot />
 </body>
 </html>

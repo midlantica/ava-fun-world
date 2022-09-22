@@ -1,18 +1,14 @@
-// import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 // @ts-ignore
 import { astroImageTools } from "astro-imagetools";
 import tailwind from "@astrojs/tailwind";
-// export default ({
-//   integrations: [
-//     tailwind(),
-//     astroImageTools
-//   ]
-// })
-
-import { defineConfig } from "astro/config";
 import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), astroImageTools, mdx()]
+  integrations: [
+    tailwind(),
+    astroImageTools,
+    mdx()
+  ]
 });

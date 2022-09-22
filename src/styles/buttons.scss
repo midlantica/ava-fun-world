@@ -1,0 +1,13 @@
+
+button {
+  color: white;
+  // font-weight: semibold;
+  background-image: $gradient-top;
+  letter-spacing: .025rem;
+  // @apply text-xs text-white rounded-full px-6 py-2 leading-1 mt-2;
+
+  &:hover {
+    // color: black;
+    background: $avaRhubarb;
+  }
+}

@@ -1,10 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Panel from '../components/panel.astro'
+import '../styles/styles.scss'
 
 export async function getStaticPaths() {
-  const posts = await Astro.glob('../posts/*.md')
-
+  const posts = await Astro.glob('../posts/*.md');
   return posts.map(post => ({
     params: {
       slug: post.frontmatter.slug
@@ -12,16 +11,27 @@ export async function getStaticPaths() {
     props: {
       post
     }
-  }))
+  }));
 }
-
-const { Content, frontmatter } = Astro.props.post
+const { Content, frontmatter } = Astro.props.post;
 ---
 
 <Layout title={frontmatter.title}>
-  <Panel>
-    <a href="/">Go Back</a>
-    <h2>{frontmatter.title}</h2>
-    <Content />
-  </Panel>
+
+  <a class="block text-sm bg-white/50 hhover:bg-white/20 rounded-full py-1 px-4 self-start " href="/">back</a>
+
+  <div class="bg-white p-12 rounded-2xl">
+    <div class="text-left">
+      <h2 class="text-avaRhubarb text-3xl font-bold mb-2">{frontmatter.title}</h2>
+      <p class="text-sm mb-2">Written by <strong>{frontmatter.author} </strong> on {new Date(frontmatter.date).toLocaleDateString()}</p>
+      <div class="text-lg">
+        <Content />
+      </div>
+    </div>
+  </div>
 </Layout>
+
+<style lang="scss">
+
+
+</style>
