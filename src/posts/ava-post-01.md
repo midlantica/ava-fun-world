@@ -6,7 +6,9 @@ date: 2022-09-18
 author: Ava Rose Harper
 ---
 
-<img class="my-8" src='/fly-agaric.jpg' alt="Fly Agaric">
+<!-- <img class="my-8" src='/fly-agaric.jpg' alt="Fly Agaric"> -->
+![fly-agaric](https://user-images.githubusercontent.com/1449595/192400486-320c80b1-c7fa-446c-8d68-da28924dc5b1.jpg)
+
 
 Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla. Maecenas sed diam eget risus varius blandit sit amet non magna. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
 
