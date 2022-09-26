@@ -18,7 +18,9 @@ const { title = 'Ava\'s Fun World' } = Astro.props as Props
 </head>
 <body class="container w-screen h-screen mx-auto p-6 text-center flex flex-col gap-2 justify-start gradientFromHell">
   <Header />
-  <slot />
+  <div class="bg-white p-12 rounded-2xl overflow-x-hidden">
+    <slot />
+  </div>
 </body>
 </html>
 

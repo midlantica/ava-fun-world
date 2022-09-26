@@ -17,12 +17,9 @@ const posts = await Astro.glob('../posts/*.md')
 
 <style lang="scss" is:global>
 
-	// button {
-	// 	align-self: flex-end;
-	// }
-	// article:last-child {
-	// 	margin-bottom: 0 !important;
-	// }
+	article:last-child {
+		margin-bottom: 0 !important;
+	}
 
 	[class^="astro-imagetools-background-image"] {
     @apply rounded-t-xl rounded-b-none h-40 min-h-[12rem] bg-no-repeat;
@@ -31,7 +28,5 @@ const posts = await Astro.glob('../posts/*.md')
   article:first-child {
     grid-column: span 2 !important;
   }
-
-
 
 </style>
