@@ -18,20 +18,31 @@ const { Content, frontmatter } = Astro.props.post;
 
 <Layout title={frontmatter.title}>
 
-
   <div class="bg-white p-12 rounded-2xl">
     <div class="text-left">
       <a class="inline-block text-sm text-avaRhubarb/60 hover:text-white bg-avaViolet/10 hover:bg-avaRhubarb/60 rounded-full py-2 px-5 self-start mb-6" href="/"> < </a>
       <h2 class="text-avaRhubarb text-5xl font-bold mb-6">{frontmatter.title}</h2>
       <p class="text-sm mb-6">Written by <strong>{frontmatter.author} </strong> on {new Date(frontmatter.date).toLocaleDateString()}</p>
-      <div class="text-lg leading-8">
-        <Content />
+
+      <div class="flex flex-col lg:flex-row gap-6">
+
+        <img class="w-full h-min" src={frontmatter.image} alt={frontmatter.title}>
+
+        <div class="shrink text-base sm:text-lg leading-8">
+          <Content />
+        </div>
       </div>
     </div>
   </div>
 </Layout>
 
 <style lang="scss">
+  // pre {
+  // }
 
+  pre > .astro-code {
+    background: red !important;
+
+  }
 
 </style>

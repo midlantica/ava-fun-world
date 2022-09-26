@@ -9,6 +9,9 @@ const posts = await Astro.glob('../posts/*.md')
   {posts.map(post => (
 		<article class="bg-white rounded-2xl text-left leading-10 p-0 shadow-lg">
 			<a href={post.frontmatter.slug}>
+				<div>
+					<img class="w-full h-min rounded-2xl rounded-b-none" src={post.frontmatter.image} alt={post.frontmatter.title}>
+				</div>
 				<div class="w-full py-6 px-8 bg-white rounded-2xl">
           <h1 class="text-avaRhubarb text-2xl font-bold leading-[1.25] mb-2 line-clamp-2">{post.frontmatter.title}</h1>
           <p class="text-inherit text-sm leading-5 mb-2 line-clamp-4">Written by <strong>{post.frontmatter.author} </strong> on {new Date(post.frontmatter.date).toLocaleDateString()}</p>
@@ -20,6 +23,8 @@ const posts = await Astro.glob('../posts/*.md')
 </div>
 
 <style lang="scss" is:global>
-
+	article img {
+		max-height: 10rem;
+	}
 
 </style>
