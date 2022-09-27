@@ -1,14 +1,16 @@
-import { defineConfig } from "astro/config";
 // @ts-ignore
+import { defineConfig } from "astro/config";
+import netlify from "@astrojs/netlify/functions";
 import { astroImageTools } from "astro-imagetools";
 import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
+  adapter: netlify(),
   integrations: [
-    tailwind(),
     astroImageTools,
-    mdx()
-  ]
+    tailwind(),
+    mdx(),
+  ],
 });
