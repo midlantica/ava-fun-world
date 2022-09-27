@@ -3,12 +3,10 @@ import Layout from '../layouts/Layout.astro'
 import Blog from '../components/blog.astro'
 
 import Gene from '/gene.png'
-
 const avaMean = 'src/images/ava-mean.png'
 const avaNice = 'src/images/ava-nice.png'
 
 const posts = await Astro.glob('../posts/*.md')
-
 ---
 
 <Layout title="Ava's Fun World - Home">

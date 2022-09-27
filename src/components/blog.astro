@@ -3,15 +3,17 @@ import Image from '../components/image.astro'
 
 const posts = await Astro.glob('../posts/*.md')
 // const { frontmatter } = Astro.props.post
+
+const sortedPosts = posts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
+
 ---
 
-<div class="h-screen flex flex-col sm:grid grid-cols-1 gap-4 pr-6 overflow-auto auto-rows-min sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 ">
-  {posts.map(post => (
-		<article class="bg-white rounded-2xl text-left leading-10 p-0 shadow-lg hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,.25)]">
+<div class="h-screen flex flex-col sm:grid grid-cols-1 gap-4 pr-6 overflow-auto auto-rows-min sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+  {sortedPosts.map(post => (
+		<article class="bg-white rounded-2xl text-left leading-10 p-0 shadow-lg hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,.25)] relative top-0 hover:-top-1">
 			<a href={post.frontmatter.slug}>
-				<!-- <div>
-					<img class="w-full h-min rounded-2xl rounded-b-none" src={post.frontmatter.image} alt={post.frontmatter.title}>
-				</div> -->
+				<img class="w-full h-min rounded-2xl rounded-b-none" src={post.frontmatter.image} alt={post.frontmatter.title}>
 				<div class="w-full py-6 px-8 rounded-2xl">
           <h1 class="text-avaRhubarb text-2xl font-bold leading-[1.25] mb-2 line-clamp-2">{post.frontmatter.title}</h1>
           <p class="text-inherit text-sm leading-5 mb-2 line-clamp-4">Written by <strong>{post.frontmatter.author} </strong> on {new Date(post.frontmatter.date).toLocaleDateString()}</p>
@@ -20,11 +22,14 @@ const posts = await Astro.glob('../posts/*.md')
 			</a>
 		</article>
 	))}
+
 </div>
 
 <style lang="scss" is:global>
 	article img {
-		max-height: 10rem;
-	}
+    width: 100%;
+    aspect-ratio: 15/7;
+    object-fit: cover;
+  }
 
 </style>

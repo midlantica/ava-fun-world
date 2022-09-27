@@ -26,6 +26,8 @@ const { Content, frontmatter } = Astro.props.post;
       </div>
       <p class="text-sm mb-6">Written by <strong>{frontmatter.author} </strong> on {new Date(frontmatter.date).toLocaleDateString()}</p>
 
+      <img class="hero w-full h-min rounded-2xl mb-3" src={frontmatter.image} alt={frontmatter.title}>
+
       <div class="w-full text-base lg:text-lg leading-8">
         <Content />
       </div>
@@ -35,5 +37,9 @@ const { Content, frontmatter } = Astro.props.post;
 </Layout>
 
 <style lang="scss">
-
+  img.hero {
+    width: 100%;
+    aspect-ratio: 15/10;
+    object-fit: cover;
+  }
 </style>
