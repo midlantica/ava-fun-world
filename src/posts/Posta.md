@@ -1,6 +1,6 @@
 
 ---
-title: Blueberry pie woohoo!
+title: Blueberry pie woohoo
 slug: fly-agarics
 excerpt: I love Fly Agaric Mushrooms.
 date: 2022-09-18
