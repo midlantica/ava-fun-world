@@ -1,4 +1,3 @@
-
 ---
 title: Blueberry pie woohoo
 slug: fly-agarics
